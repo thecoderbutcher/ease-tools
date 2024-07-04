@@ -10,8 +10,11 @@ generator client{
 }
 
 enum UserRole{
-  ADMIN
-  USER
+  Administrador
+  Veterinario
+  Asistente
+  Empleado
+  Proveedor
 }
 
 model User{
@@ -21,7 +24,7 @@ model User{
   emailVerified DateTime?
   image         String?
   password      String?
-  role          UserRole @default(USER)
+  role          UserRole @default(Veterinario)
   accounts      Account[]
 }
 
